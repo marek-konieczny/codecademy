@@ -122,7 +122,7 @@ public String delDel(String str) {
 //mixStart("piz snacks")  false
 
 public static boolean mixStart(String str) {
-	if(str.length()<4)
+	if(str.length()<3)
 	{
 		System.out.println(str.substring(1, 2));
 	  return false;
@@ -136,10 +136,31 @@ public static boolean mixStart(String str) {
 	{
 		System.out.println(str.substring(1, 2));
 		return false;
-	
 	}
 }
 //---------------------------------------------------------------------------
+//Given a string, return a string made of the 
+//first 2 chars (if present), however include first 
+//char only if it is 'o' and include the second 
+//only if it is 'z', so "ozymandias" yields "oz". 
+
+//startOz("ozymandias")  "oz"
+//startOz("bzoo")  "z"
+//startOz("oxx")  "o"
+public String startOz(String str) {
+	String result;
+	 if(str.length()<1)
+		 return "";
+	 else if (str.substring(0, 1).equals("o"))
+		 result="o";
+	 else result="";
+	 if(str.length()<2)
+		 return result;
+	 else if (str.substring(1, 2).equals("z"))
+		 return result+="z";
+	 else return result;
+}
+//----------------------------------------------------------------------------
 	public static void main(String[] args) throws ClassNotFoundException,
 			SQLException, IOException {
 		
