@@ -218,6 +218,20 @@ public int close10(int a, int b) {
 	}
 	//return (Math.min(Math.abs(a-10),Math.abs(b-10)));  
 }
+//--------------------------------------------------------------------------------
+//Given 2 int values, return true if they are both in the range 30..40 inclusive, 
+//or they are both in the range 40..50 inclusive. 
+
+//in3050(30, 31)  true
+//in3050(30, 41)  false
+//in3050(40, 50)  true
+public boolean numberInRange(int number,int rangeStart,int rangeStop){
+	return (number>=rangeStart && number <=rangeStop);
+}
+public boolean in3050(int a, int b) {
+	return ((numberInRange(a, 30, 40)&&numberInRange(b, 30, 40))||(numberInRange(a, 40, 50)&&numberInRange(b, 40, 50)));
+}
+
 	public static void main(String[] args) throws ClassNotFoundException,
 			SQLException, IOException {
 		
