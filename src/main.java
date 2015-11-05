@@ -114,6 +114,31 @@ public String delDel(String str) {
 }
 //---------------------------------------------------------------------------
 
+//Return true if the given string begins with "mix", 
+//except the 'm' can be anything, so "pix", "9ix" .. all count. 
+
+//mixStart("mix snacks")  true
+//mixStart("pix snacks")  true
+//mixStart("piz snacks")  false
+
+public static boolean mixStart(String str) {
+	if(str.length()<4)
+	{
+		System.out.println(str.substring(1, 2));
+	  return false;
+	}
+	else if (str.substring(1, 3).equals("ix"))
+	{
+		System.out.println(str.substring(1, 2));
+		return true;
+		}
+	else
+	{
+		System.out.println(str.substring(1, 2));
+		return false;
+	
+	}
+}
 //---------------------------------------------------------------------------
 	public static void main(String[] args) throws ClassNotFoundException,
 			SQLException, IOException {
@@ -204,6 +229,7 @@ public String delDel(String str) {
 		fw.close();
 		System.out.println("done");
 		
+		System.out.println(mixStart("aix"));
 		long endTime = System.nanoTime();
 		 long duration = (endTime - startTime); 
 		 System.out.print("Execution time total in milliseconds: ");
