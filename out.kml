@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.1">
+<Document>
+<Style id="waypoint_n">
+<IconStyle>
+<Icon>
+<href>http://maps.google.com/mapfiles/kml/pal4/icon62.png</href>
+</Icon>
+</IconStyle>
+</Style>
+<Placemark>
+<description>
+2015-10-23 07:17:02.0
+</description>
+<styleUrl>#waypoint_n</styleUrl>
+<Point>
+<coordinates>19.159042,49.861546</coordinates>
+ </Point>
+</Placemark>
+</Document>
+</kml>
