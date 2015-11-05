@@ -7,6 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import javax.swing.plaf.basic.BasicInternalFrameTitlePane.MaximizeAction;
 import javax.xml.stream.events.Comment;
 
 public class main {
@@ -161,6 +162,43 @@ public String startOz(String str) {
 	 else return result;
 }
 //----------------------------------------------------------------------------
+
+//Given three int values, a b c, return the largest. 
+//intMax(1, 2, 3)  3
+//intMax(1, 3, 2)  3
+//intMax(3, 2, 1)  3
+public int intMax(int a, int b, int c) {
+	int currMax=0;
+	if (a>b)
+	{
+		currMax=a;
+		if(a>c)
+		{
+			currMax=a;
+		return currMax;
+		}
+		else {
+			currMax=c;
+			return currMax;
+		}
+	}
+	else currMax=b;
+	
+	{
+			if(b>c)
+			{
+			currMax=b;
+			return currMax;
+			}
+		else {
+			currMax=c;
+			return currMax;
+		}
+	}
+	//return currMax;
+	  
+}
+
 	public static void main(String[] args) throws ClassNotFoundException,
 			SQLException, IOException {
 		
@@ -178,7 +216,7 @@ public String startOz(String str) {
 		//
 		//
 		//String query = "select date_time,longitude,latitude from marvis_data where `date_time`>'2015-10-30 01:00:00' and `date_time`<'2015-10-30 23:00:00' and sn =80 order by id_marvis desc;";
-		String query ="SELECT * FROM `marvis_data` WHERE `date_time`>='2015-10-23 06:00:00' and `date_time`<='2015-10-23 08:00:00' limit 1;";
+		String query ="SELECT * FROM `marvis_data` WHERE `date_time`>='2015-10-23 06:00:00' and `date_time`<='2015-10-23 08:00:00';";
 		//String query ="SELECT * FROM `marvis_data` WHERE `date_time`>='2015-11-01 01:00:00';";
 		// ---------------------------------------------------------------------------------
 		ResultSet rs1 = stmt.executeQuery(query);
