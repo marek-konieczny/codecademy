@@ -7,6 +7,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import javax.xml.stream.events.Comment;
+
 public class main {
 	
 	//Return true if the given non-negative number 
@@ -111,7 +113,8 @@ public String delDel(String str) {
 		}
 }
 //---------------------------------------------------------------------------
-
+//Comment test
+//---------------------------------------------------------------------------
 	public static void main(String[] args) throws ClassNotFoundException,
 			SQLException, IOException {
 		
@@ -121,6 +124,7 @@ public String delDel(String str) {
 				"jdbc:mysql://10.1.1.30:3306/forumapm_msmrd01", "developer",
 				"QzKHfnVaUzJDTxbM");
 		Statement stmt = conn.createStatement();
+		
 
 		// CUSTOM QUERY
 		// --------------------------------------------------------------------
