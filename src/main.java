@@ -113,7 +113,7 @@ public String delDel(String str) {
 		}
 }
 //---------------------------------------------------------------------------
-//Comment test
+
 //---------------------------------------------------------------------------
 	public static void main(String[] args) throws ClassNotFoundException,
 			SQLException, IOException {
