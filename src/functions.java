@@ -1,4 +1,3 @@
-
 public class functions {
 	// Return true if the given non-negative number
 	// is a multiple of 3 or a multiple of 5. Use the % "mod" operator
@@ -325,6 +324,37 @@ public class functions {
 			lastThreeCharacters = lastThreeCharacters.toUpperCase();
 			str = str.substring(0, str.length() - 3) + lastThreeCharacters;
 			return str;
+		}
+	}
+
+	// ---------------------------------------------------------------------------------------
+	// Given a non-empty string and an int N, return the string made
+	// starting with char 0, and then every Nth char of the string.
+	// So if N is 3, use char 0, 3, 6, ... and so on. N is 1 or more.
+
+	// everyNth("Miracle", 2) "Mrce"
+	// everyNth("abcdefg", 2) "aceg"
+	// everyNth("abcdefg", 3) "adg"
+	public static String everyNth(String str, int n) {
+		if (str.length() < 1)
+			return "";
+		else {
+			if (n >= str.length())
+				return (str.substring(0, 1));
+			else {
+
+				String result = str;
+				result = str.substring(0, 1);
+				str = str.substring(1);
+				while (str.length() >= n) {
+					str = str.substring(n-1);
+					System.out.println(str);
+					result += str.substring(0, 1);
+					System.out.println(result);
+					str = str.substring(1);
+				}
+				return result;
+			}
 		}
 	}
 

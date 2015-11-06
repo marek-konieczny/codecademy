@@ -13,11 +13,11 @@ import javax.xml.stream.events.Comment;
 
 public class main {
 
-
+	
 
 	public static void main(String[] args) throws ClassNotFoundException,
 			SQLException, IOException {
-
+		//everyNth("marekkonieczny",3);
 		long startTime = System.nanoTime();
 		Class.forName("com.mysql.jdbc.Driver");
 		Connection conn = DriverManager.getConnection(
