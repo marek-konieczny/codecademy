@@ -285,6 +285,36 @@ public class main {
 		return str_result;
 	}
 
+	// -------------------------------------------------------------------------------------------
+	// Return true if the given string contains between 1 and 3 'e' chars.
+
+	// stringE("Hello") true
+	// stringE("Heelle") true
+	// stringE("Heelele") false
+
+	public boolean stringE(String str) {
+
+		int count = 0;
+		for (int i = 0; i < str.length(); i++) {
+			char currentAnalizing;
+			currentAnalizing = str.charAt(i);
+			if (currentAnalizing == 'e')
+				count++;
+		}
+		if (numberInRange(count, 1, 3))
+			return true;
+		return false;
+	}
+
+	// ---------------------------------------------------------------------------------------------
+	// Given two non-negative int values, return true if they have
+	// the same last digit, such as with 27 and 57. Note that the % "mod"
+	// operator computes remainders, so 17 % 10 is 7.
+
+	// lastDigit(7, 17) true
+	// lastDigit(6, 17) false
+	// lastDigit(3, 113) true
+
 	public static void main(String[] args) throws ClassNotFoundException,
 			SQLException, IOException {
 
